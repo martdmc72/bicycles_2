@@ -1,0 +1,13 @@
+<h1 class="title">New bike</h1>
+
+<%= simple_form_for @bicycle, html: {multipart: true } do |f| %>
+  <%= f.input :brand %>
+  <%= f.input :description %>
+  <%= f.input :condition, label: false, collection: Bicycle::CONDITION, prompt: "Select condition", wrapper: false %>
+  <%= f.input :image, label: false %></label>
+
+  <%= f.button :submit, class: 'button is-warning', method: "POST" %>
+  <%= link_to "Cancel", root_path, class: 'button is-white' %>
+
+
+<% end %>

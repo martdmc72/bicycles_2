@@ -1,0 +1,9 @@
+<h1 class="title">
+  Mis bicicletas
+</h1>
+
+<% @bicycles.each do |b| %>
+<%= link_to "bicycle name", bicycle_path(b) %>
+<%= b.brand %>
+  
+<% end %>
