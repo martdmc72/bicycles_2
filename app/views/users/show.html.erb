@@ -1,0 +1,81 @@
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<hr>
+
+<div class="tile is-ancestor">
+
+  <div class="tile is-vertical">
+    <div class="tile">
+
+
+      <div class="tile is-2">
+        <figure class="image">
+          <%= image_tag("marcin.jpg") %>
+          <!-- <img src="/apple-touch-icon-precomposed.png" > -->
+        </figure>
+      </div>
+
+      <div class="tile is-vertical is-parent">
+        <div class="tile is-child">
+          <article class="tile is-child notification is-primary">
+            <p class="title">Name :</p>
+            <p class="subtitle"><%= @user.name %></p>
+          </article>
+          
+        </div>
+        <div class="tile is-child">
+          <article class="tile is-child notification is-warning">
+            <p class="title">Email :</p>
+            <p class="subtitle"><%= @user.email %></p>
+          </article>
+        </div>
+        <div class="tile is-child">
+          <article class="tile is-child notification is-info">
+            <p class="title">Account :</p>
+            <p class="subtitle"><%= @user.wallet %> $</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title">Biostats</p>
+        <p class="subtitle">In a few words about me ...</p>
+        <div class="content"><%= @user.bio %></div>
+
+      </article>
+
+   
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

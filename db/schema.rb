@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_02_071213) do
+ActiveRecord::Schema.define(version: 2021_01_02_132945) do
 
   create_table "bicycles", force: :cascade do |t|
     t.string "brand"
     t.text "description"
     t.string "condition"
     t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "avatar"
+    t.string "name"
+    t.string "email", default: "user_email@op.pl"
+    t.integer "wallet", default: 0
+    t.text "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -3,8 +3,9 @@
 </h1>
 
 <% @bicycles.each do |b| %>
-<%= link_to "bicycle name", bicycle_path(b) %>
-<%= b.brand %>
-<%= image_tag(b.image_url(:thumb)) %>
+<%= link_to b.brand, bicycle_path(b) %>
+<% if b.image_url %>
+  <%= image_tag(b.image_url(:thumb)) %>
+<% end %>
  <hr> 
 <% end %>
