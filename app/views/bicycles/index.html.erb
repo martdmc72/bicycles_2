@@ -5,5 +5,6 @@
 <% @bicycles.each do |b| %>
 <%= link_to "bicycle name", bicycle_path(b) %>
 <%= b.brand %>
-  
+<%= image_tag(b.image_url(:thumb)) %>
+ <hr> 
 <% end %>
