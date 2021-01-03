@@ -1,6 +1,11 @@
+
+<% content_for :header do %>
+<%= link_to 'Add Bicycle', new_bicycle_path %>
+
 <h1 class="title">
   Mis bicicletas
 </h1>
+<% end %>
 
 <% @bicycles.each do |b| %>
 <%= link_to b.brand, bicycle_path(b) %>

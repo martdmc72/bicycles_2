@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_03_133905) do
+ActiveRecord::Schema.define(version: 2021_01_03_164700) do
 
   create_table "bicycles", force: :cascade do |t|
     t.string "brand"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_133905) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "avatar"
+    t.string "image"
     t.string "name"
     t.string "email", default: "user_email@op.pl"
     t.integer "wallet", default: 0
