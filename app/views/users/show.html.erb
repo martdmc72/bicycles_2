@@ -15,7 +15,6 @@
       <div class="tile is-2">
         <figure class="image">
           <%= image_tag("marcin.jpg") %>
-          <!-- <img src="/apple-touch-icon-precomposed.png" > -->
         </figure>
       </div>
 
@@ -37,6 +36,18 @@
           <article class="tile is-child notification is-info">
             <p class="title">Account :</p>
             <p class="subtitle"><%= @user.wallet %> $</p>
+          </article>
+        </div>
+        <div class="tile is-child">
+          <article class="tile is-child notification is-info">
+            <p class="title">My Bicycles :</p>
+            <% @user.bicycles.each do |b| %>
+            <div class="tile"><p class="subtitle"><%= b.brand %></p></div>
+            <figure class="image is-96x96">
+              <%= image_tag(b.image_url) %>
+            </figure>
+            <% end %>
+            
           </article>
         </div>
       </div>

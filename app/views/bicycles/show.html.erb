@@ -1,10 +1,12 @@
 <%#= image_tag(@bicycle.image_url(:thumb)) %>
 
 <h1 class="title"><%= @bicycle.brand %></h1>
-<h2 class="title"><%= @bicycle.description %></h2>
+<p><%= @bicycle.description %><p>
 <h1 class="title"><%= @bicycle.condition %></h1>
 
+<% if @bicycle.image_url %>
+    <%= image_tag(@bicycle.image_url(:standard)) %>
+<% end %>
 
-<%= image_tag(@bicycle.image_url(:standard)) %>
 
 

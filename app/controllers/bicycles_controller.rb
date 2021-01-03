@@ -19,6 +19,20 @@ class BicyclesController < ApplicationController
     end
   end
 
+  def edit   
+  end
+
+  def update
+    @bicycle.update(bicycle_params)
+    if @bicycle.save
+      redirect_to bicycle_path(@bicycle)
+    else
+      render :new
+    end
+  end
+
+
+
 
   private
 
